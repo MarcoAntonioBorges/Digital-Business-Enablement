@@ -7,7 +7,7 @@ public class LoginBean {
 	private boolean termo;
 
 	public String logar() {
-		if ("rafael".equals(getLogin()) && "123".equals(getSenha())) {
+		if ("marco".equals(getLogin()) && "123".equals(getSenha())) {
 			System.out.println("Usuario logado: " + getLogin());
 			System.out.println(isTermo());
 			return "carrinho";

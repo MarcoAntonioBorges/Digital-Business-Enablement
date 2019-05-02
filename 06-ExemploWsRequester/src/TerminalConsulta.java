@@ -16,13 +16,13 @@ public class TerminalConsulta {
 	private static Logger log = Logger.getLogger(TerminalConsulta.class);
 	
 	public static void main(String[] args) throws RemoteException {
-		log.warn("Início da Aplicação");
+		log.warn("Inï¿½cio da Aplicaï¿½ï¿½o");
 		String nome = "Loja FIAP Run";
 		LocalDate hoje = LocalDate.now();
 		DateTimeFormatter formatador = 
 				DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		System.out.println(nome + " " + hoje.format(formatador));
-		System.out.println("Digite o código do produto desejado: ");
+		System.out.println("Digite o cï¿½digo do produto desejado: ");
 		Scanner scanner = new Scanner(System.in);
 		int codigo = scanner.nextInt();
 		scanner.close();
@@ -33,6 +33,6 @@ public class TerminalConsulta {
 				stub.consultarProduto(consulta);
 		ProdutoTO produto = response.get_return();
 		System.out.println(produto.getDescricao());
-		log.warn("Final da Aplicação");
+		log.warn("Final da Aplicaï¿½ï¿½o");
 	}
 }

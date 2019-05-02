@@ -28,8 +28,8 @@ public class CarrinhoBean {
 
 	public List<Forma> getFormasPagamento() {
 		List<Forma> formas = new ArrayList<Forma>();
-		formas.add(new Forma(1, "Crédito"));
-		formas.add(new Forma(2, "Débito"));
+		formas.add(new Forma(1, "Credito"));
+		formas.add(new Forma(2, "Debito"));
 		formas.add(new Forma(3, "Boleto"));
 		return formas;
 	}
