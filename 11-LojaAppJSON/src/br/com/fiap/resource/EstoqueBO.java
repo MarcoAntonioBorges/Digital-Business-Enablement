@@ -12,7 +12,7 @@ public class EstoqueBO {
 		} else if(codigo == 403) {
 			return new ProdutoTO(codigo, "Camiseta rosa", 4, 2.99);
 		} else {
-			return new ProdutoTO(-1, "Produto não encontrado", 0, 0);
+			return new ProdutoTO(-1, "Produto nao encontrado", 0, 0);
 		}
 	}
 	
