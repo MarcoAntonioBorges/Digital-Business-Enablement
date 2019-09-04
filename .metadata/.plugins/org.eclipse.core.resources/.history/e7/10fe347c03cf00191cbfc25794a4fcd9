@@ -1,0 +1,17 @@
+package br.com.fiap.entity;
+
+
+@Entity
+@SequenceGenerator(name="produto", sequenceName = "SQ_PRODUTO")
+public class Produto {
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "produto")
+	private int codigo;
+	private String nome;
+	private double preco;
+	private boolean novo;
+	private LocalDate dataFabricacao;
+	//gets e sets
+}
+	
+

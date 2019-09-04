@@ -1,0 +1,6 @@
+--	private int codigo;
+--	private String nome;
+--	private double preco;
+--	private boolean novo;
+--	private LocalDate dataFabricacao;
+INSERT INTO PRODUTO(CODIGO, NOME, PRECO, NOVO, DATA_FABRICACAO) VALUES(1, "BOLACHA DE SAL", 2.50, true, "1996-05-30");
