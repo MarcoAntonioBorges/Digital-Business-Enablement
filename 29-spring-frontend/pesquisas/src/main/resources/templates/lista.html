@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <meta charset="UTF-8">
+    <title>Resultados</title>
+</head>
+<body>
+	<table class="table">
+		<thead class="thead-dark">
+			<tr>
+				<th>NOME DO PRODUTO</td>
+				<th>PRECO DO PRODUTO</td>
+				<th>DATA DE FABRICAÇAO</td>
+				<th>PRODUTO NOVO?</td>
+			</tr>
+		</thead>
+		<tbody>
+		    <tr th:each="produto: ${prod}">
+		        <td th:text="${produto.nome}" />
+		        <td th:text="${#numbers.formatDecimal(p.preco, 1, 2)}"></td>
+				<td th:text="${#temporals.format(p.dataFabricacao, 'dd/MM/yyyy')}"></td>
+		        <td th:text="${produto.novo}?'Sim':'Não'" />
+		    </tr>
+		</tbody>
+	</table>
+</body>
+</html>
